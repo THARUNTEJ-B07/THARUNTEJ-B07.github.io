@@ -80,7 +80,7 @@
             transform: translateY(-2px);
         }
 
-        /* CONTACT BUTTON */
+        /* CONTACT BUTTON (PHONE) */
         .contact-btn {
             display: inline-block;
             background-color: #25D366; /* WhatsApp Green */
@@ -90,9 +90,28 @@
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
-            margin-top: 30px;
+            margin: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             animation: pulse 2s infinite;
+        }
+
+        /* INSTAGRAM BUTTON - ADDED BACK IN */
+        .insta-btn {
+            display: inline-block;
+            /* Instagram Gradient Color */
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        .insta-btn:hover {
+            transform: scale(1.05); /* Slight grow effect on hover */
         }
         
         @keyframes pulse {
@@ -105,6 +124,7 @@
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .container { padding: 15px; }
+            .contact-btn, .insta-btn { width: 80%; margin-bottom: 10px; }
         }
     </style>
 </head>
@@ -150,17 +170,11 @@
         
         <div style="margin-bottom: 50px;">
             <h3>Ready to visit the site?</h3>
+            
             <a href="tel:+919493747352" class="contact-btn">📞 Call: +91 94937 47352</a>
-            <a href="tel:+919490736367" class="contact-btn">📞 Call: +91 9490736367</a>
+            
+            <a href="tel:+919490736367" class="contact-btn">📞 Call: +91 94907 36367</a>
             
             <br>
 
-            <a href="https://www.instagram.com/elitevaibhav3" class="insta-btn" target="_blank">📸 Follow on Instagram</a>
-            <br><br>
-            <small>Tap the button above to call directly</small>
-        </div>
-
-    </div>
-
-</body>
-</html>
+            <a href="https://www.instagram.com/elitevaibhav3"
