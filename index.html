@@ -58,29 +58,66 @@
             color: #2ecc71;
             font-weight: bold;
         }
+        
+        /* Orange Title for Upcoming */
+        .section-title.upcoming {
+            border-bottom: 2px solid #ff9800;
+            color: #ff9800;
+        }
 
-        /* LINKS */
+        /* LINKS DESIGN */
         .project-link {
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: white;
             color: #333;
             padding: 15px;
             margin: 10px 0;
             text-decoration: none;
             border-radius: 8px;
-            font-weight: bold;
             transition: 0.3s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border-left: 5px solid #2ecc71; /* Green accent bar */
         }
         .project-link:hover {
-            background: #2ecc71; /* Green hover */
-            color: white;
+            background: #f0fff4;
             transform: translateY(-2px);
         }
 
-        /* CONTACT BUTTON (PHONE) */
+        /* UPCOMING PROJECT DESIGN (Non-clickable look) */
+        .upcoming-project {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            color: #555;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 5px solid #ff9800; /* Orange accent bar */
+        }
+
+        .project-info {
+            text-align: left;
+        }
+        .project-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+        }
+        .project-price {
+            font-size: 0.9rem;
+            color: #2e7d32; /* Dark Green for Price */
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        
+        .arrow-icon {
+            font-size: 1.2rem;
+            color: #888;
+        }
+
+        /* CONTACT BUTTONS */
         .contact-btn {
             display: inline-block;
             background-color: #25D366; /* WhatsApp Green */
@@ -95,10 +132,9 @@
             animation: pulse 2s infinite;
         }
 
-        /* INSTAGRAM BUTTON - ADDED BACK IN */
+        /* INSTAGRAM BUTTON */
         .insta-btn {
             display: inline-block;
-            /* Instagram Gradient Color */
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             color: white;
             padding: 15px 30px;
@@ -111,16 +147,25 @@
             transition: transform 0.3s;
         }
         .insta-btn:hover {
-            transform: scale(1.05); /* Slight grow effect on hover */
+            transform: scale(1.05);
         }
         
+        /* CITY UPDATE BOX */
+        .update-box {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px dashed #aaa;
+            display: inline-block;
+        }
+
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* MOBILE FIXES */
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .container { padding: 15px; }
@@ -140,45 +185,95 @@
 
         <div class="section-card">
             <div class="section-title">📍 Tirupati & Surroundings</div>
+            
             <a href="https://drive.google.com/file/d/13WfmvvuIhDtsPHdm6fa_Rt9TJ4iSDfuh/view" class="project-link" target="_blank">
-                <span>🏙️ Agasthya Enclave</span> <span>📂 View Layout ➤</span>
+                <div class="project-info">
+                    <div class="project-name">🏙️ Agasthya Enclave</div>
+                    <div class="project-price">💰 Price: ₹ 31,08,000 Lakhs Onwards</div>
+                </div>
+                <span class="arrow-icon">📂 ➤</span>
             </a>
+
             <a href="https://drive.google.com/file/d/1AClDWkqdEczz7ZFTEPCR4lLvV6p-9bml/view?usp=drive_link" class="project-link" target="_blank">
-                <span>🏘️ Pakala Township</span> <span>📂 View Layout ➤</span>
+                <div class="project-info">
+                    <div class="project-name">🏘️ Pakala Township</div>
+                    <div class="project-price">💰 Price: ₹ 9,93,600 Lakhs Onwards</div>
+                </div>
+                <span class="arrow-icon">📂 ➤</span>
             </a>
         </div>
 
         <div class="section-card">
             <div class="section-title">🌳 Venkatagiri Region</div>
+            
             <a href="https://drive.google.com/file/d/1ECA_jKdUluIYaMhaLzN6wQKEXndqLC0r/view?usp=drive_link" class="project-link" target="_blank">
-                <span>🌺 Sri Srinivasa Gardens</span> <span>📂 View Layout ➤</span>
+                <div class="project-info">
+                    <div class="project-name">🌺 Sri Srinivasa Gardens</div>
+                    <div class="project-price">💰 Price: ₹ 18,56,250 Lakhs Onwards</div>
+                </div>
+                <span class="arrow-icon">📂 ➤</span>
             </a>
+
             <a href="https://drive.google.com/file/d/1YNq679xXfGOAqmr8YL2B8OYhtIDIXiZ_/view?usp=drive_link" class="project-link" target="_blank">
-                <span>🚜 Giri Nandana Farms</span> <span>📂 View Layout ➤</span>
+                <div class="project-info">
+                    <div class="project-name">🚜 Giri Nandana Farms</div>
+                    <div class="project-price">💰 Price: ₹ 10,93,500 Lakhs Onwards</div>
+                </div>
+                <span class="arrow-icon">📂 ➤</span>
             </a>
         </div>
 
         <div class="section-card">
             <div class="section-title">🏭 Industrial Belt</div>
+            
             <a href="https://drive.google.com/file/d/1KnxBvayNzFoe-3HL_ADtrWSdtnq7h0q0/view?usp=drive_link" class="project-link" target="_blank">
-                <span>⚓ Sagarmala Krish City</span> <span>📂 View Layout ➤</span>
+                <div class="project-info">
+                    <div class="project-name">⚓ Sagarmala Krish City</div>
+                    <div class="project-price">💰 Price: ₹ 8,41,000 Lakhs Onwards</div>
+                </div>
+                <span class="arrow-icon">📂 ➤</span>
             </a>
+
             <a href="https://drive.google.com/file/d/1QxbLciVdm5B4i5SP89A5meyqZHGdC4v8/view?usp=drive_link" class="project-link" target="_blank">
-                <span>🛣️ Highway Green City</span> <span>📂 View Layout ➤</span>
+                <div class="project-info">
+                    <div class="project-name">🛣️ Highway Green City</div>
+                    <div class="project-price">💰 Price: ₹ 8,40,840 Lakhs Onwards</div>
+                </div>
+                <span class="arrow-icon">📂 ➤</span>
             </a>
+        </div>
+
+        <div class="section-card">
+            <div class="section-title upcoming">🚀 Upcoming Projects</div>
+            
+            <div class="upcoming-project">
+                <div class="project-info">
+                    <div class="project-name">📍 Sullurpeta</div>
+                    <div class="project-price" style="color: #ff9800;">🚧 Launching Soon</div>
+                </div>
+            </div>
+
+            <div class="upcoming-project">
+                <div class="project-info">
+                    <div class="project-name">📍 Chittoor</div>
+                    <div class="project-price" style="color: #ff9800;">🚧 Launching Soon</div>
+                </div>
+            </div>
         </div>
         
         <div style="margin-bottom: 50px;">
             <h3>Ready to visit the site?</h3>
-            
             <a href="tel:+919493747352" class="contact-btn">📞 Call: +91 94937 47352</a>
-            
             <a href="tel:+919490736367" class="contact-btn">📞 Call: +91 94907 36367</a>
-            
             <br>
-
             <a href="https://www.instagram.com/elitevaibhav3" class="insta-btn" target="_blank">📸 Follow on Instagram</a>
             
+            <br>
+            <div class="update-box">
+                <p style="margin: 0; font-size: 1rem;">🌍 <strong>Hyderabad & Bangalore</strong></p>
+                <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #ddd;">Contacts & details will be updated here soon.</p>
+            </div>
+
             <br><br>
             <small>Tap the buttons above to contact directly</small>
         </div>
